@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "971421444364",
+    "firebase_url": "https://automahouse-ad208.firebaseio.com",
+    "project_id": "automahouse-ad208",
+    "storage_bucket": "automahouse-ad208.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971421444364:android:b278d37347665e8b30c129",
+        "android_client_info": {
+          "package_name": "com.example.automahouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971421444364-kvusel0g9sq9abg327knc88q37mf9rbh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.automahouse",
+            "certificate_hash": "0de8f8b90ea179b1d4b3048490d11e39dadc3eac"
+          }
+        },
+        {
+          "client_id": "971421444364-js7lj9en909e4n2jp5h00bijnathkef3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHqUrrwwoJ2hZki3zks7OvGfBlNWo7kBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971421444364-js7lj9en909e4n2jp5h00bijnathkef3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
