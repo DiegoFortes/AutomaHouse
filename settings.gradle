@@ -1,0 +1,2 @@
+rootProject.name='AutomaHouse'
+include ':app'
