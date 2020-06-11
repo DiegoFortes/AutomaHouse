@@ -2,8 +2,6 @@ package com.example.automahouse;
 
 import android.content.Intent;
 import android.os.Bundle;
-//import android.support.annotation.NonNull;
-//import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -79,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, task -> {
+                    .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         progressBar.setVisibility(View.INVISIBLE);
 
@@ -97,6 +95,9 @@ public class MainActivity extends AppCompatActivity {
                         updateUI(null);
                     }
                 });
+        Intent intent= new Intent(MainActivity.this, Lampada.class);
+        startActivity(intent);
+
     }
 
     @Override
