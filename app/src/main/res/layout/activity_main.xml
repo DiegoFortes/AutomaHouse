@@ -14,7 +14,8 @@
       android:layout_height="100dp"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="60dp"
-      android:src="@drawable/ic_google_logo"
+      android:scaleType="centerCrop"
+      android:src="@drawable/ic_firebase_logo"
       android:contentDescription="@string/app_name"/>
     <TextView
         android:id="@+id/text"
