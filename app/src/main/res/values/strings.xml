@@ -3,4 +3,5 @@
     <string name="firebase_login">Firebase Login</string>
     <string name="login_with_google">Login with Google</string>
     <string name="logout">Logout</string>
+    <string name="logout1">logout1</string>
 </resources>

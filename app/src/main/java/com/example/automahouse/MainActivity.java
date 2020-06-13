@@ -95,8 +95,6 @@ public class MainActivity extends AppCompatActivity {
                         updateUI(null);
                     }
                 });
-        Intent intent= new Intent(MainActivity.this, Lampada.class);
-        startActivity(intent);
 
     }
 
@@ -127,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
             Picasso.get().load(photo).into(image);
             btn_logout.setVisibility(View.VISIBLE);
             btn_login.setVisibility(View.INVISIBLE);
+            Intent intent= new Intent(MainActivity.this, Lampada.class);
+            startActivity(intent);
         } else {
             text.setText("Firebase Login \n");
             Picasso.get().load(R.drawable.ic_firebase_logo).into(image);
@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
             btn_login.setVisibility(View.VISIBLE);
         }
     }
+
 
     private void Logout() {
         FirebaseAuth.getInstance().signOut();

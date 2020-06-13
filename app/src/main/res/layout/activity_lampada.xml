@@ -8,23 +8,37 @@
 
     <Switch
         android:id="@+id/Led"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_width="113dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="110dp"
         android:text="Led"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintEnd_toStartOf="@+id/Icono_led"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Icono_led" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/Icono_led"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="155dp"
+        android:layout_height="88dp"
         android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_light_bulb" />
+        app:srcCompat="@drawable/ic_lamp_off" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/logout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:text="@string/logout1"
+        android:background="@drawable/round_gb"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
