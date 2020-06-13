@@ -7,25 +7,118 @@
     tools:context=".MainActivity">
 
     <Switch
-        android:id="@+id/Led"
-        android:layout_width="113dp"
+        android:id="@+id/led"
+        android:layout_width="130dp"
         android:layout_height="26dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="110dp"
-        android:text="Led"
+        android:layout_marginEnd="5dp"
+        android:text="Sala"
         android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/Icono_led"
+        app:layout_constraintEnd_toStartOf="@+id/icono_led"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/Icono_led"
+        android:id="@+id/icono_led"
         android:layout_width="155dp"
         android:layout_height="88dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_lamp_off" />
+
+    <Switch
+        android:id="@+id/Led"
+        android:layout_width="130dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="5dp"
+        android:text="Cozinha"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/Icono_led"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led" />
+
+    <ImageView
+        android:id="@+id/Icono_led"
+        android:layout_width="155dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icono_led"
+        app:srcCompat="@drawable/ic_lamp_off" />
+
+    <Switch
+        android:id="@+id/led2"
+        android:layout_width="130dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="5dp"
+        android:text="Banheiro"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/Icono_led"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Led" />
+
+    <ImageView
+        android:id="@+id/icono_led2"
+        android:layout_width="155dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Icono_led"
+        app:srcCompat="@drawable/ic_lamp_off" />
+
+    <Switch
+        android:id="@+id/led3"
+        android:layout_width="130dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="5dp"
+        android:text="Quarto 1"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/Icono_led"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led2" />
+
+    <ImageView
+        android:id="@+id/icono_led3"
+        android:layout_width="155dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icono_led2"
+        app:srcCompat="@drawable/ic_lamp_off" />
+
+    <Switch
+        android:id="@+id/led4"
+        android:layout_width="130dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="5dp"
+        android:text="Quarto 2"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/icono_led4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led3" />
+
+    <ImageView
+        android:id="@+id/icono_led4"
+        android:layout_width="155dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icono_led3"
         app:srcCompat="@drawable/ic_lamp_off" />
 
     <Button
