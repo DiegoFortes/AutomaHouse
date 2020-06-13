@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -20,26 +21,36 @@ public class Lampada extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference myRef;
 
+    protected void faz_algo(int lampId, int lamp_img_id) {
+        database = FirebaseDatabase.getInstance();
+        Switch lamp_switch = findViewById(lampId);
+        String lampName  = lamp_switch.getText().toString();
+        myRef = database.getReference(lampName);
+        ImageView img_switch = findViewById(lamp_img_id);
+        img_switch.setImageDrawable(getResources().getDrawable(R.drawable.ic_lamp_off));
+        lamp_switch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (lamp_switch.isChecked()) {
+                    img_switch.setImageDrawable(getResources().getDrawable(R.drawable.ic_lamp_on));
+                    myRef.setValue(1);
+                } else {
+                    img_switch.setImageDrawable(getResources().getDrawable(R.drawable.ic_lamp_off));
+                    myRef.setValue(0);
+                }
+            }
+        });
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_lampada);
-        Switch led=(Switch)findViewById(R.id.Led);
-        // Write a message to the database
-        database= FirebaseDatabase.getInstance();
-        myRef= database.getReference("led");
 
-        led.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b){
-                    myRef.setValue(1);
-                }else{
-                    myRef.setValue(0);
-                }
-            }
-        });
+        faz_algo(R.id.lamp1, R.id.ic_lamp1);
+
+
 
         Button btnLogout = (Button) findViewById(R.id.logout1);
         btnLogout.setOnClickListener(new View.OnClickListener() {
