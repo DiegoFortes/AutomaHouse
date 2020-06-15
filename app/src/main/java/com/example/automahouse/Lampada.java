@@ -51,7 +51,6 @@ public class Lampada extends AppCompatActivity implements View.OnClickListener {
     }
 
     protected void activateSwitch(Switch lamp, ImageView icon, DatabaseReference dbRef) {
-//                Toast.makeText(this,"Botão 1",Toast.LENGTH_SHORT).show();
         if (lamp.isChecked()) {
             icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_lamp_on));
             dbRef.setValue(1);
