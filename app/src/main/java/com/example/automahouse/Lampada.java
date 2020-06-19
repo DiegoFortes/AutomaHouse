@@ -1,12 +1,14 @@
 package com.example.automahouse;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Switch;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
@@ -68,13 +70,20 @@ public class Lampada extends AppCompatActivity implements View.OnClickListener {
                     Switch lampSwitch = findViewById(lampId);
                     if (lampSwitch.isChecked() ^ isOn.equals(1)) {
                         ImageView icon = findViewById(imageIdsBySwitchId.get(lampId));
-//                        icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_lamp_on));
+                        Drawable img;
+                        if (lampSwitch.isChecked()) {
+                            // se estava checado e entrou no if (mudou no banco), desligar.
+                            img = getResources().getDrawable(R.drawable.ic_lamp_off);
+                        } else {
+                            img = getResources().getDrawable(R.drawable.ic_lamp_on);
+                        }
+                        icon.setImageDrawable(img);
                         lampSwitch.setChecked(isOn.equals(1));
                     }
                 }
             }
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError databaseError) {
                 System.out.println("Error getting data from DB.");
             }
         };
@@ -109,7 +118,6 @@ public class Lampada extends AppCompatActivity implements View.OnClickListener {
         String lampName = lampSwitch.getText().toString();
         myRef = database.getReference(lampName);
         ImageView imgSwitch = null;
-
         switch (v.getId()) {
             case R.id.lamp1:
                 imgSwitch = findViewById(R.id.ic_lamp1);
