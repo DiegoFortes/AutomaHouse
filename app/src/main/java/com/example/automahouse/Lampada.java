@@ -25,6 +25,7 @@ public class Lampada extends AppCompatActivity implements View.OnClickListener {
     FirebaseDatabase database;
     DatabaseReference myRef;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
